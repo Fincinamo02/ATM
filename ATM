@@ -1,0 +1,53 @@
+balance = 100000
+
+def balance_check():
+    print("Your balance is currently ",balance,"$")
+
+def deposit(balance):
+    add = int(input("Input the amount of money that you wish to deposit : "))
+    balance = balance + add
+    print("Your new balance is now ",balance,"$ ( +",add,"$)")
+    return balance
+    
+def withdraw(balance):
+    minus = int(input("Input the amount of money that you wish to withdraw : "))
+    balance = balance - minus
+    print("Your balance is now ",balance,"$ ( -",minus,"$)")
+    return balance
+
+while True:
+    pin = int(input("Enter a 4 digit PIN : "))
+    if len(str(pin)) != 4:
+        print("Invalid PIN")
+    else:
+        print("PIN set successfully")
+        while True:
+            print("1 - Check balance")
+            print("2 - Deposit money")
+            print("3 - Withdraw Money")
+            print("4 - Exit")
+            selection = input("Select one of the options above : ")
+                
+            if selection == "1":
+                balance_check()
+            elif selection == "2":
+                balance = deposit(balance)
+            elif selection == "3":
+                balance = withdraw(balance)
+            elif selection == "4":
+                print("Thank you for using ATM. Have a good day!")
+                break
+            
+            
+            
+        
+                
+                    
+            
+            
+            
+        
+        
+        
+        
+        
